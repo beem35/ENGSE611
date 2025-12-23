@@ -5,26 +5,115 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Web</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        nav {
+            padding: 10px;
+        }
 
+        body {
+            background-image: linear-gradient(45deg, #8a4f1e 25%, #e8dd41 75%);
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: 'Prompt', serif;
+        }
+
+        .head {
+            background-color: #a87a48;
+            text-align: center;
+            border-radius: 10px;
+            width: 50%;
+            margin-left: 25%;
+        }
+
+        .img-banner {
+            border-radius: 10px;
+            object-fit: cover;
+
+        }
+
+        .img-banner:hover {
+            padding: 5px 5px;
+            border: 5px solid #41d128;
+        }
+
+        table {
+            background-color: #bdb9b5;
+            padding: 10px 10px;
+            border-radius: 10px;
+        }
+        td {
+            background-color: #a87a48;
+            padding: 5px 5px;
+            border: 0;
+        }
+
+        th {
+            background-color: #8a4f1e;
+            color: white;
+            border: 0;
+        }
+
+        input[type="text"] {
+            border: 2px solid #8a4f1e;
+            padding: 5px;
+            font-size: 18px;
+            border-radius: 5px;
+            width: 75%;
+            color: black;
+            font-family: 'Prompt', serif;
+        }
+        input[type="text"]:focus {
+            border-color: rgb(234, 234, 54);
+            box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+        }  
+
+        button {
+            width: 50%;
+            font-size: 24px;
+            font-family: 'Prompt';
+            background-color: #41d128;
+            border-radius: 50px;
+            border: 0 ;
+        }
+        button:hover {
+            width: 55%;
+            font-size: 26px;
+            border: 5px solid #43fc14;
+        }
+
+        footer {
+            background-color: #d0db8a;
+            width: 50%;
+            border-radius: 10px;
+            padding: 20px 10px;
+            margin-left: 25%;
+            margin: auto;
+        }
+    </style>
 </head>
 
 <body>
     <!-- เนื้อหา -->
     <div>
-        <header>
+        <header class="head">
             <h1>Welcome to website ปัณณวัฒน์ สิทธิตัน</h1>
         </header>
 
         <nav align="center">
             <br>
-            <a href="https://www.rmutl.ac.th/" target="_blank"><img src="/img/rmutl888p1.png" alt="rmutl888p1"
-                    width="50%"></a>
+            <a href="https://www.rmutl.ac.th/" target="_blank"><img class="img-banner" src="/img/rmutl888p1.png"
+                    alt="rmutl888p1" width="50%"></a>
             <br>
-            <a href="https://www.rmutl.ac.th/" target="_blank"><img
+            <a href="https://www.rmutl.ac.th/" target="_blank"><img class="img-banner"
                     src="/img/Gemini_Generated_Image_pd40d9pd40d9pd40.png" alt="rmutl888p2" width="50%"></a>
         </nav>
         <main>
-            <table align="center" border="1">
+            <table align="center" >
                 <caption>
                     <h2>3 เพลงในที่ชอบ</h2>
                 </caption>
@@ -119,16 +208,17 @@
         </main>
         <section align="center"><br>
             <a href="https://www.rmutl.ac.th/" target="_blank">
-                <img src="/img/rmutl888p1.png" alt="rmutl888p1" width="50%">
+                <img class="img-banner" src="/img/rmutl888p1.png" alt="rmutl888p1" width="50%">
                 <br>
-                <img src="/img/Gemini_Generated_Image_pd40d9pd40d9pd40.png" alt="rmutl888p2" width="50%">
+                <img class="img-banner" src="/img/Gemini_Generated_Image_pd40d9pd40d9pd40.png" alt="rmutl888p2"
+                    width="50%">
             </a>
         </section>
 
         <footer>
             <br>
-            <strong style="padding-left: 250px;">3 เหตุผลหลัก ว่าทำไมเราต้องสร้างหน้าเว็บด้วย HTML</strong>
-            <ol style="padding-left: 350px;">
+            <strong>3 เหตุผลหลัก ว่าทำไมเราต้องสร้างหน้าเว็บด้วย HTML</strong>
+            <ol>
                 <li>
                     <p>เพื่อกำหนด "โครงสร้าง" ของหน้าเว็บ (Structure)</p>
                 </li>
