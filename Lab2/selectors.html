@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>csstest</title>
+    <style>
+        h1 {
+            color: blue;
+            font-size: 32px;
+        }
+        h2 {
+            color: red;
+            font-size: 28px;
+            text-shadow: 5px 5px 5px gray;
+        }
+        p {
+            color: green;
+            font-size: 16px;
+            width: 300px;
+            border: 1px solid gray;
+            padding: 10px;
+            word-wrap: break-word;
+        }
+        p:hover {
+            color: orange;
+            font-size: 20px;
+        }
+
+        /* font style */
+        body {
+            font-family: serif;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 20px; 
+        }
+
+        .sans-serif {
+            font-family: 'Arial', sans-serif;
+            font-style: italic;
+            width: 600px;
+            font-size: 20px;
+            color: black;
+        }
+
+        .serif {
+            font-family: Georgia;
+            font-style: normal;
+            width: 600px;
+            font-size: 22px;
+            color: brown;
+        }
+
+        .serif-red {
+            font-family: Georgia;
+            font-style: oblique;
+            width: 600px;
+            font-size: 22px;
+            color: red;
+        }
+
+        button {
+            background-color: orange;
+            color: rgb(80, 130, 6);
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            border-radius: 10px;
+        }
+
+        /* hover effect */
+        button:hover {
+            background-color: yellow;
+            color: red;
+        }
+
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+
+        #header {
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 20px;
+            background-color: aqua;
+            border-radius: 10px;
+        }
+
+        /* Attribute Selector */
+        input[type="text"] {
+            border: 2px solid blue;
+            padding: 5px;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        input[type="text"]:focus {
+            border-color: green;
+            box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+        }  
+
+
+        /* Child Selector */
+        .parent {
+            font-size: 16px;
+            border: 2px solid gray;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .child-Title {
+            font-size: 2em;
+            color: purple;
+            font-weight: bold;
+        }
+        .child-text {
+            font-size: 1.2em;
+            color: black;
+        }
+        .fixed-text {
+            font-size: 18px;
+            color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>ตัวอย่าง CSS Selectors</h1>
+    <p>This is a paragraph to test CSS styling.</p>
+    <button>Click Me!</button>
+    <p class="highlight">hello</p>
+    <header id="header">
+        <h1>Welcome to website ปัณณวัฒน์ สิทธิตัน</h1>
+    </header>
+    <nav class="highlight">
+        <p>ยินดีต้อนรับ</p>
+        <h2>Attribute Selectors [type= "text"]</h2>
+        <input type="text" placeholder="พิมพ์ข้อความที่นี่">
+    </nav>
+    <nav>
+        <h2>font demo</h2>
+        <p class="sans-serif">This is a sans-serif font example.</p>
+        <p class="serif">This is a serif font example.</p>
+        <p class="serif-red">This is a serif font with red color.</p>
+    </nav>
+    <nav>
+        <div class="parent">
+            <p class="child-Title">Child Selector Title</p>
+            <p class="child-text">This is some child text inside the parent div.</p>
+            <p class="fixed-text">This text has a fixed class style.</p>
+            <h3>normal</h3>
+        </div>
+        <h3>normal</h3>
+        <p>this text is normal to show style ldfiefwoiefjwkjf dofaijsajf sdoia weofijwelfj ifdjoajweifjwf oijfd fowijfopwjef fwj </p>
+    </nav>
+</body>
+
+</html>
