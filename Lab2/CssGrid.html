@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: grid;
+            /* แบ่งคอลัมน์ */
+            grid-template-columns: 20% 80%;
+            grid-template-rows: 70px 530px 70px;
+            /* grid-template: 
+                    "header header" 70px
+                    "aside main" 530px
+                    "footer footer" 70px
+                    / 20% 80%; */
+            gap: 10px;
+            padding: 10px;
+            background-color: bisque;
+            height: 100vh;
+            box-sizing: border-box;
+        }
+        .gird-container {
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 100px 100px;
+            gap: 10px;
+            padding: 10px;
+            background-color:floralwhite ;
+        }
+        header{
+            grid-row: 1/2;
+            grid-column: 1/3;
+            /* grid-area: header; */
+            background-color: gold;
+            color:  black;
+            text-align: center; line-height: 70px; font-size: 24px;
+        }
+        aside{
+            grid-row: 2/3;
+            grid-column: 1/2;
+            /* grid-area: aside; */
+            background-color: aquamarine;
+            color: black;
+            text-align: center; line-height: 530px; font-size: 24px;
+        }
+        content{
+            grid-row: 2/3;
+            grid-column: 2/3;
+            /* grid-area: main; */
+            background-color: cadetblue;
+            color: black;
+            text-align: center; line-height: 530px; font-size: 24px;
+        }
+        footer {
+            grid-row: 3/4;
+            grid-column: 1/3;
+            /* grid-area: footer; */
+            background-color: gold;
+            color:  black;
+            text-align: center; line-height: 70px; font-size: 24px;
+        }
+        .item{
+            background: skyblue;
+            color: white;
+            font-size: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .item1{
+            grid-column: 1/3;
+        }
+        .item3{
+            grid-row: 2/3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>header</header>
+        <aside>side</aside>
+        <content>content</content>
+        <footer>footer</footer>
+    </div>
+    <br>
+    <div class="gird-container">
+        <div class="item item1">item1 2 column</div>
+        <div class="item item2">item2</div>
+        <div class="item item3">item3 แถวล้างแล้ว</div>
+        <div class="item item4">item4</div>
+        <div class="item item5">item5</div>
+    </div>
+</body>
+</html>
