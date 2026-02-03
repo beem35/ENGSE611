@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre id="outputb">ผลลัพธ์จะแสดงที่นี้</pre>
+    <button onclick="runDemo()">Run Code</button>
+    <script>
+        function runDemo() {
+            
+            const output = [];
+
+            let score = 30;
+
+            if(score>=50){
+                output.push("ผลสอบ ผ่าน");
+                console.log("ผลสอบ ผ่าน");
+            } else {
+                output.push("ผลสอบ ไม่ผ่าน");
+                console.log("ผลสอบ ไม่ผ่าน");
+            }
+
+            for(let i = 0; i<5; i++){
+                output.push("รอบที่"+i);
+                console.log("รอบที่",i);
+            }
+            document.getElementById("outputb").textContent = output.join("\n");
+        }
+    </script>
+</body>
+</html>

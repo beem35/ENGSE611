@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ตัวอย่างการเขียน JavaScript </h1>
+    <h2>แบบบฝังใน HTML</h2>
+    <button onclick="showMessage()">กดเพื่อแสดงข้อความ</button>
+    <script>
+        function showMessage(){
+            alert("สวัสดีครับ นี่คือข้อความจาก JavaScript!");
+        }
+        console.log("โค้ดใน <script> กำลังทำงาน")
+    </script> 
+    <h2>แบบภายนอก HTML</h2>
+    <button id="btn">คลิกที่ตรงนี้</button>
+    <!-- เชื่อม javaScrip_test.js -->
+     <script src="javaScrip_test.js"></script>
+     <br>
+     <h2>การใช้ตัวแปรใน JavaScript</h2>
+    <button onclick="runDemo()">Run Code</button>
+    <p id="outputBox"></p>
+    <script>
+        function runDemo() {
+            
+            console.clear();
+            const output = [];
+
+            let stuName = 'beem';
+            let age = 20;
+            let isStu = true;
+            const universityName = 'มหาวิทยาลัยเทคโนโลยี' ;
+
+            output.push("ชื่อ: "+ stuName);
+            console.log("ชื่อ: ", stuName);
+            output.push("อายุ: "+ age);
+            console.log("อายุ: ", age);
+
+            age = 21;
+            output.push("อายุnew: "+ age);
+            console.log("อายุnew: ", age);
+            console.log(output);
+
+            let str = 'hi';
+            let num = 10;
+            let thu = true;
+            let unfined;
+            let Null = null;
+
+            console.log(typeof str);
+            console.log(typeof num);
+            console.log(typeof thu);
+            console.log(typeof unfined);
+            console.log(typeof Null);
+            try {
+                universityName = 'มหาวิทยาลัยใหม่';
+            } catch (e) {
+                output.push("Error: "+ e.message);
+                console.error(e.message);
+            }
+
+            document.getElementById("outputBox").textContent = output.join("\n");
+        }
+    </script>
+</body>
+</html>

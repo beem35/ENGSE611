@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre id="output">ผลลัพธ์จะแสดงที่นี้</pre>
+    <button onclick="runStringDemo()">Run Code</button>
+    <script>
+        function runStringDemo() {
+            const out = [];
+
+            let text = 'JavaScript Nice!!';
+            let firstName = 'beem';
+
+            out.push(`hello ${firstName}!`);
+            console.log(`hello ${firstName}!`);
+
+            out.push("ความยาว: " + text.length);
+            out.push("ตัวใหญ่: " + text.toUpperCase());
+            out.push("ตัวเล็ก: " + text.toLowerCase());
+            out.push('มี "Java" ?: ' + text.includes('Java'));
+            out.push('ตำแหน่ง "Script": ' + text.indexOf('Script'));
+            out.push("ตัดคำ 1-4: " + text.slice(0,4));
+            out.push("แทนที่: " + text.replace('good','job'));
+            console.log("ความยาว: " , text.length);
+            console.log("ตัวใหญ่: " , text.toUpperCase());
+            console.log("ตัวเล็ก: " , text.toLowerCase());
+            console.log('มี "Java" ?: ' , text.includes('Java'))
+            console.log('ตำแหน่ง "Script": ' , text.indexOf('Script'))
+            console.log("ตัดคำ 1-4: " , text.slice(0,4));
+            console.log("แทนที่: " , text.replace('good','job'))
+
+            document.getElementById("output").textContent = out.join("\n")
+
+            console.clear();
+            out.forEach(line => console.log("> "+line));
+        }
+    </script>
+</body>
+</html>
