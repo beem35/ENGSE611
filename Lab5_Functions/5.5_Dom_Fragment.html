@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button onclick="testLoop()">testLoop</button>
+    <button onclick="rumtest()">run</button>
+    <script>
+        function testLoop() {
+            console.time("Loop 1M")
+            let sum = 0
+            for (let i = 0 ; i < 100000; i++){
+                sum += i
+            }
+            console.timeEnd("Loop 1M")
+            alert("ดูในlog")
+        }
+
+        function rumtest() {
+            const listNormal = document.getElementById("list-normal")
+            const listFragment = document.getElementById("list-fragment")
+
+            listNormal.innerHTML = " ";
+            listFragment.innerHTML = " ";
+
+            console.time("Normal Dom")
+            for (let i = 0 ; i < 100000; i++){
+                const li = document.createElement("li");
+                li.textContent = `item ${i}`
+                listNormal.appendChild(li)
+            }
+            console.timeEnd("Normal Dom")
+
+            const fragment = document.createDocumentFragment()
+             console.time("Fragment Dom")
+            for (let i = 0 ; i < 100000; i++){
+                const li = document.createElement("li");
+                li.textContent = `item ${i}`
+                fragment.appendChild(li)
+            }
+            listFragment.appendChild(fragment);
+            console.timeEnd("Fragment Dom")
+
+            alert("done")
+        }
+    </script>
+</body>
+</html>

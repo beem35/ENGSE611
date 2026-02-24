@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .highlight {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="header">หัวข้อเดิมหน้าเว็บ</h1>
+    <p>รายการตัวอย่าง (class = "item"):</p>
+    <ul>
+      <li class="item">รายการที่ 1</li>
+      <li class="item">รายการที่ 2</li>
+      <li class="item">รายการที่ 3</li>
+    </ul>
+    <div style="margin-top: 20px; margin-bottom: 10px">
+      <button onclick="changeTitle()">เปลี่ยนข้อความ สีของหัวข้อ</button>
+      <button onclick="highlightItems()">ไฮไลด์ .item ทั้งหมด</button>
+      <button onclick="addParagraph()">สร้าง เพิ่มข้อความใหม่</button>
+    </div>
+    <div id="logBox">log: ...</div>
+    <script>
+      //เลือก Element
+      const title = document.getElementById("header");
+      const item = document.querySelectorAll(".item");
+      const logBox = document.getElementById("logBox");
+
+      function log(message) {
+        console.log(message);
+        logBox.textContent += "\n" + message;
+      }
+
+      //เปลี่ยนข้อความและสี
+      function changeTitle() {
+        title.textContent = "หัวข้อถูกเปลี่ยนโดย javaScript";
+        title.style.color = "red";
+        title.style.fontWeight = "bold";
+        log("เปลี่ยนข้อความและสีของ #header แล้ว");
+      }
+
+      //ไฮไลด์ element ทีมี class = "item"
+      function highlightItems() {
+        item.forEach((item, index) => {
+          item.classList.add("highlight");
+          item.textContent = "รายการที่ " + (index + 1) + "(ถูกไฮไลด์)";
+        });
+        log("เพิ่มคลาส .highlight ให้ .item ทั้งหมด");
+      }
+      //สร้าง p ใหม่แล้วแปะท้าย body
+      function addParagraph() {
+        let p = document.createElement("p");
+        p.textContent =
+          "ข้อความใหม่ที่เพิ่มจาก javaScript เวลา: " +
+          new Date().toLocaleDateString();
+        document.body.appendChild(p);
+        log("สร้าง <p> ใหม่และ appendChild ลงท้าย <body>");
+      }
+    </script>
+  </body>
+</html>
