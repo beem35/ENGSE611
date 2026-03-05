@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // ตัวอย่าง mouse event(onclick)
+        document.getElementById("myButton").onclick = function(){
+            alert("youclick")
+        }
+        // ตัวอย่าง keyboard Event (onkeyup)
+        document.onkeyup = function(event) {
+            console.log("youkeyup: "+event.key)
+        }
+        //Input Event (oninput)
+        document.getElementById("myInput").oninput = function(){
+            console.log("กำลังพิมพ์ "+this.value)
+        }
+        //Window Event (onresize)
+        window.onresize = function(){
+            console.log("ขนาดหน้าจอเปลี่ยน "+window.innerWidth+ "x" +window.innerHeight)
+        }
+        //Touch Event (ontouchstart)
+        document.ontouchstart = function(event) {
+            console.log("แตะหน้าจอที่ "+ event.touches[0].clientX+", "+event.touches[0].clientY)
+        }
+        // Clipboard Event (oncopy)
+        document.oncopy = function(event) {
+            console.log("youกำลังcopydata!!")
+        }
+        // Drag & Drop Event (ondragstart)
+        document.getElementById("draggableElement").ondragstart = function(event) {
+            event.dataTransfer.setData("text",event.target.id)
+            console.log("เริ่มลาก "+ event.target.id)
+        }
+        // Drag & Drop Event (ondrop)
+        document.getElementById("dropZone").ondrop = function(event){
+            event.preventDefault();
+            var data = event.dataTransfer.getData("text")
+            event.target.appendChild(document.getElementById(data))
+            console.log("วางสำเร็จ")
+        }
+    </script>
+</body>
+</html>
